@@ -1,2 +1,4 @@
 node_modules
 .env
+# avoid saving the "experiments" file
+webpack.config.js
