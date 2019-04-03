@@ -1,6 +1,6 @@
 {
   "name": "webpacky",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "bin/index.js",
   "bin": "bin/index.js",
   "scripts": {
@@ -12,5 +12,8 @@
   "keywords": [],
   "author": "alex",
   "license": "MIT",
-  "description": "webpack starter/boilerplate"
+  "description": "webpack starter/boilerplate",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
 }
