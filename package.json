@@ -7,13 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "inquirer": "^7.0.0"
+    "inquirer": "^7.0.0",
+    "prettier": "^1.18.2"
   },
   "keywords": [],
   "author": "alex",
   "license": "MIT",
-  "description": "webpack starter/boilerplate",
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  }
+  "description": "webpack starter/boilerplate"
 }
