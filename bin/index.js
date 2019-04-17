@@ -99,12 +99,7 @@ inquirer
     const yarnAdd = ['yarn', 'add', '-D', 'webpack', 'webpack-cli']
       .concat(answers.packages.map(item => item.packages))
       .join(' ')
-      console.log(yarnAdd);
-
 
     webpackConfigCreator(answers.packages)
     // spawn('/bin/sh', ['-c', yarnAdd], { stdio: [0,1,2] })
-    // TODO:
-    // create webpack.config.js based on the answers
-
   })
