@@ -11,21 +11,7 @@
 //     disableHostCheck: true,
 //   },
 // const miniCSS = require('mini-css-extract-plugin')
-// const viewsLoader = {
-//   test: /\.pug$/,
-//   loader: 'pug-loader',
-// }
-//
-// const jsxLoader = {
-//   test: /\.js$/,
-//   exclude: /(node_modules|bower_components)/,
-//   use: {
-//     loader: 'babel-loader',
-//     options: {
-//       cacheDirectory: true,
-//     },
-//   },
-// }
+
 //
 // // stylus loader will generate an error trying to load a base64 font
 // // without the quotes as videojs.css include in its src code,
