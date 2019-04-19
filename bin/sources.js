@@ -21,12 +21,7 @@
 //   use: ['style-loader', 'css-loader'],
 // }
 //
-// const styleLoader = {
-//   test: /\.styl$/,
-//   exclude: /(node_modules|bower_components)/,
-//   use: ['style-loader', 'css-loader', 'postcss-loader', 'stylus-loader'],
-// }
-//
+
 // const extractStylusLoader = {
 //   test: /\.styl$/,
 //   use: [miniCSS.loader, 'css-loader', 'postcss-loader', 'stylus-loader'],
