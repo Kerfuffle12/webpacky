@@ -52,6 +52,10 @@ exports.loadersSource = {
         cacheDirectory: true,
       },
     },
+  }`,
+  css: `{
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader'],
   }`
 }
 
