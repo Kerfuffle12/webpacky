@@ -43,6 +43,10 @@ exports.loadersSource = {
     test: /\.styl$/,
     use: ['style-loader', 'css-loader', 'stylus-loader'],
   }`,
+  stylusMiniCSS: `{
+    test: /\.styl$/,
+    use: [MiniCSS.loader, 'css-loader', 'stylus-loader'],
+  }`,
   babel: `{
     test: /\.jsx?$/,
     exclude: /node_modules/,
@@ -56,7 +60,11 @@ exports.loadersSource = {
   css: `{
     test: /\.css$/,
     use: ['style-loader', 'css-loader'],
-  }`
+  }`,
+  cssMiniCSS: `{
+    test: /\.css$/,
+    use: [MiniCSS.loader, 'css-loader'],
+  }`,
 }
 
 exports.pluginsSource = {
@@ -67,5 +75,6 @@ exports.pluginsSource = {
 
 exports.requiredSource = {
   case: `const CaseSensitive = require('case-sensitive-paths-webpack-plugin')`,
-  clean: `const { CleanWebpackPlugin } = require('clean-webpack-plugin')`
+  clean: `const { CleanWebpackPlugin } = require('clean-webpack-plugin')`,
+  minicss: `const MiniCSS = require('mini-css-extract-plugin')`,
 }
