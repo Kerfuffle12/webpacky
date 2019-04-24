@@ -4,6 +4,22 @@ const inquirer = require('inquirer')
 const webpackConfigCreator = require('./webpackConfigCreator')
 const { loadersSource, requiredSource, pluginsSource } = require('./sources')
 
+function cleanLoaders(loaders) {
+  const miniCSS = loaders.some(item => item.packages === 'mini-css-extract-plugin')
+
+  if (miniCSS) {
+    loaders.map(item => {
+      if (/stylus-loader/.test(item.packages)) {
+        item.loader = loadersSource.stylusMiniCSS
+      }
+
+      if (/css-loader/.test(item.packages)) {
+        item.loader = loadersSource.stylusMiniCSS
+      }
+    })
+  }
+}
+
 inquirer
   .prompt([
     {
@@ -30,13 +46,23 @@ inquirer
         },
         {
           name:'css',
-          value: { packages: 'style-loader css-loader mini-css-extract-plugin', },
+          value: {
+            packages: 'style-loader css-loader',
+            loader: loadersSource.css,
+          },
         },
         {
           name:'stylus',
           value: {
-            packages: 'stylus stylus-loader style-loader css-loader mini-css-extract-plugin',
+            packages: 'stylus stylus-loader style-loader css-loader',
             loader: loadersSource.stylus,
+          },
+        },
+        {
+          name: 'mini-css-extract-plugin',
+          value: {
+            packages: 'mini-css-extract-plugin',
+            required: requiredSource.minicss,
           },
         },
         {
@@ -96,6 +122,10 @@ inquirer
     }
   ])
   .then(answers => {
+    // Mutate packages initially to check and replace style-loader to miniCSSExtractPlugin
+    cleanLoaders(answers.packages)
+
+    console.log(answers.packages);
     const yarnAdd = ['yarn', 'add', '-D', 'webpack', 'webpack-cli']
       .concat(answers.packages.map(item => item.packages))
       .join(' ')
