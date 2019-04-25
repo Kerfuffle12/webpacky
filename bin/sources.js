@@ -10,30 +10,7 @@
 //     stats: 'errors-only',
 //     disableHostCheck: true,
 //   },
-// const miniCSS = require('mini-css-extract-plugin')
 
-//
-// // stylus loader will generate an error trying to load a base64 font
-// // without the quotes as videojs.css include in its src code,
-// // a duplication of the loader is necessary to handle css
-// const cssLoader = {
-//   test: /\.css$/,
-//   use: ['style-loader', 'css-loader'],
-// }
-//
-
-// const extractStylusLoader = {
-//   test: /\.styl$/,
-//   use: [miniCSS.loader, 'css-loader', 'postcss-loader', 'stylus-loader'],
-// }
-//
-// // stylus loader will generate an error trying to load a base64 font
-// // without the quotes as videojs.css include in its src code,
-// // a duplication of the loader is necessary to handle css
-// const extractCSSLoader = {
-//   test: /\.css$/,
-//   use: [miniCSS.loader, 'css-loader'],
-// }
 exports.loadersSource = {
   pug: `{
     test: /\.pug$/,
