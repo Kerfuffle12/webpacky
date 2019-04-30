@@ -39,6 +39,6 @@ function webpackConfigCreator(packages) {
   })
 
   fs.writeFileSync('webpack.config.js', prettyConfigFile)
-  console.log(prettyConfigFile);
 }
+
 module.exports = webpackConfigCreator

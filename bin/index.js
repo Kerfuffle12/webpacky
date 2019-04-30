@@ -131,5 +131,5 @@ inquirer
       .join(' ')
 
     webpackConfigCreator(answers.packages)
-    // spawn('/bin/sh', ['-c', yarnAdd], { stdio: [0,1,2] })
+    spawn('/bin/sh', ['-c', yarnAdd], { stdio: [0,1,2] })
   })
