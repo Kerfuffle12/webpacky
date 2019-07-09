@@ -11,6 +11,6 @@
   },
   "keywords": [],
   "author": "alex",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT",
+  "description": "webpack starter/boilerplate"
 }
