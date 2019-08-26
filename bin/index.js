@@ -38,12 +38,8 @@ inquirer
           value: 'stylus stylus-loader style-loader css-loader mini-css-extract-plugin',
         },
         {
-          name:'prettier',
-          value: 'prettier pretty-quick',
-        },
-        {
-          name:'husky',
-          value: 'husky',
+          name: 'webpack-hot-middleware',
+          value: 'webpack-hot-middleware',
         },
         {
           name: 'webpack-node-externals',
@@ -56,6 +52,14 @@ inquirer
         {
           name: 'webpack-subresource-integrity',
           value: 'webpack-subresource-integrity',
+        },
+        {
+          name:'prettier',
+          value: 'prettier pretty-quick',
+        },
+        {
+          name:'husky',
+          value: 'husky',
         },
         new inquirer.Separator('----------------------------------'),
       ]
