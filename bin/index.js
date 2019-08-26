@@ -67,4 +67,6 @@ inquirer
       .join(' ')
 
     spawn('/bin/sh', ['-c', yarnAdd], { stdio: [0,1,2] })
+    // TODO:
+    // create webpack.config.js based on the answers
   })
